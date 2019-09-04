@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <element>
+      <a>-1,5; 3,4</a>
+      <b>2,2; 5,7</b>
+      <color>127; 255; 158; 255</color>
+      <lineType>solid</lineType>
+      <type>line</type>
+   </element>
+   <element>
+      <center>0; 0</center>
+      <color>127; 255; 0; 0</color>
+      <filled>false</filled>
+      <lineType>dot</lineType>
+      <radius>15.0</radius>
+      <type>circle</type>
+   </element>
+   <element>
+      <a>-15; -20</a>
+      <b>15; -20,3</b>
+      <c>0; 21</c>
+      <color>127; 255; 0; 255</color>
+      <filled>true</filled>
+      <lineType>dashDot</lineType>
+      <type>triangle</type>
+   </element>
+</root>

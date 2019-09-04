@@ -1,0 +1,42 @@
+[
+ {
+ "type": "line",
+ "a": "-10; 100",
+ "b": "3; 95",
+ "color": "127; 255; 158; 255",
+ "lineType": "solid"
+ },
+ {
+ "type": "line",
+ "a": "-5; 79",
+ "b": "5; 60",
+ "color": "127; 255; 156; 255",
+ "lineType": "dot"
+ },
+ {
+ "type": "circle",
+ "center": "0; 0",
+ "radius": 15,
+ "filled": false,
+ "color": "127; 255; 0; 0",
+ "lineType": "dot"
+ },
+ {
+ "type": "triangle",
+ "a": "-15; -40",
+ "b": "15; 60",
+ "c": "0; 30",
+ "filled": true,
+ "color": "127; 255; 0; 255",
+ "lineType": "dashDot"
+ },
+ {
+ "type": "triangle",
+ "a": "10; -30",
+ "b": "5; 80",
+ "c": "0; 40",
+ "filled": true,
+ "color": "127; 255; 0; 255",
+ "lineType": "solid"
+ }
+]
