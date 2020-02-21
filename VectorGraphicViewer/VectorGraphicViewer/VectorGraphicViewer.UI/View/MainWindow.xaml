@@ -11,9 +11,7 @@
         Title="MainWindow" Height="600" Width="1000"  ResizeMode="NoResize">
 
     <Page>
-
-            <Page.Resources>
-              
+            <Page.Resources>           
                 <Style x:Key="CustomTextBox" TargetType="TextBox" >
                     <Setter Property="Width" Value="250"/>
                     <Setter Property="Height" Value="40"/>
@@ -32,43 +30,31 @@
                 <Setter Property="Control.Background" Value="#E8EFF5" />
                 <Setter Property="Control.BorderBrush" Value="#E8EFF5" />
                 <Setter Property="Control.BorderBrush" Value="Black" />
-                <Setter Property="Control.FontWeight" Value="Bold" />
-               
+                <Setter Property="Control.FontWeight" Value="Bold" />              
             </Style>
-
-
-
+                    
         </Page.Resources>
-
+            
        <Grid Name="drawGrid">
-
         <Grid.RowDefinitions>
             <RowDefinition Height="80" />
             <RowDefinition Height="*" />
-
-
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            
-                <ColumnDefinition Width="270"/>
-                <ColumnDefinition Width="600"/>
-                <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions>
-
-
+        <Grid.ColumnDefinitions>      
+             <ColumnDefinition Width="270"/>
+             <ColumnDefinition Width="600"/>
+             <ColumnDefinition Width="100"/>
+         </Grid.ColumnDefinitions>
                 <!--<Label  Grid.Column="0" Grid.Row="0" Content="Enter File:" Style="{StaticResource CustomLabel}" />-->
                 <TextBox  Grid.Row="0" Grid.Column="0" Style="{StaticResource CustomTextBox}" Text="{Binding FilePath,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" >
                 <TextBox.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                         <Setter Property="BorderThickness" Value="1"/>
-
                     </Style>
                 </TextBox.Resources>
             </TextBox>
             <Button  Grid.Row="0" Grid.Column="1" Command="{Binding OpenFileCommand}" HorizontalAlignment="Left" Style="{StaticResource Flat}" Width="180" Height="40"  Content="Open File" ></Button>
-
-
 
             <ItemsControl Grid.Column="1" Grid.Row="1" Background="Transparent"  ItemsSource="{Binding Path=Lines}">
                 <ItemsControl.ItemsPanel>
@@ -83,7 +69,6 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
-
             <ItemsControl Grid.Column="1" Grid.Row="1" Background="Transparent"  ItemsSource="{Binding Path=Circles}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -93,13 +78,10 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Path Fill="{Binding FilledColor}"  >
-
                             <Path.Data>
                                 <EllipseGeometry Center="{Binding Center}" RadiusX="{Binding RadiousX}" RadiusY="{Binding RadiousX}"></EllipseGeometry>
                             </Path.Data>
-
                         </Path>
-
 
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
@@ -113,18 +95,11 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Polygon Points="{Binding Points}" >
-                            
-                            
-                        </Polygon>
-                        
-
+                        <Polygon Points="{Binding Points}" >                                                    
+                        </Polygon>                      
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-
-
-
         </Grid>
     </Page>
 </Window>
